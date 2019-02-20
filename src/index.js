@@ -9,7 +9,7 @@ const kuzzle = new Kuzzle(new WebSocket("localhost"));;
 async function main () {
   await kuzzle.connect();
   // Create index and collection if needed
-  createFixtures();
+  await createFixtures();
 
   // Create our new potential customer
   leaflet.setUserPosition([43.6108, 3.8767]);
