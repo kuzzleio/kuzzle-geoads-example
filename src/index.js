@@ -4,10 +4,9 @@ import {Kuzzle, WebSocket} from 'kuzzle-sdk';
 const leaflet = new Leaflet([43.6108, 3.8767]);
 
 // Connect to Kuzzle
-var kuzzle;
+const kuzzle = new Kuzzle(new WebSocket("localhost"));;
 
 async function main () {
-  kuzzle = new Kuzzle(new WebSocket("localhost"));
   await kuzzle.connect();
   // Create index and collection if needed
   createFixtures();
