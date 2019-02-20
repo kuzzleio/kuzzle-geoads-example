@@ -21,11 +21,11 @@ class Leaflet {
     
     basemap.addTo(this.map);
 
-    this.onUserLocationChange = () => {};
-    this.map.on('click', e => {
+    this.onUserLocationChange = async () => {};
+    this.map.on('click', async e => {
       this.map.removeLayer(this.marker);
       this.marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(this.map);
-      this.onUserLocationChange({
+      await this.onUserLocationChange({
         location: {
           lat: e.latlng.lat,
           lon: e.latlng.lng
