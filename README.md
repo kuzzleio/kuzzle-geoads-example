@@ -7,6 +7,7 @@ Geofencing demonstration where an app would dispay an ad if a user would be in r
 To build it simply run
 
 ```sh
+npm install
 npm run build
 ```
 
